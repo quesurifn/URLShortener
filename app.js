@@ -71,6 +71,6 @@ app.get('/:encoded_id', function(req, res){
 
 });
 
-var server = app.listen(port, function(){
-  console.log('Server listening on port ' + port);
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
