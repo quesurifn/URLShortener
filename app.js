@@ -10,8 +10,8 @@ var port = process.env.PORT || 3000;
 // grab the url model
 var Url = require('./models/url');
 
-mongoose.connect("mongodb://master:1234@ds159767.mlab.com:59767/kylely");
-mongodb://master:1234@ds159767.mlab.com:59767/kylely
+mongoose.connect('mongodb://' + config.db.host + '/' + config.db.name);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
