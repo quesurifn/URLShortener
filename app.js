@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config = require('./config');
 var base58 = require('./base58.js');
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 
 // grab the url model
 var Url = require('./models/url');
@@ -71,6 +71,6 @@ app.get('/:encoded_id', function(req, res){
 
 });
 
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
